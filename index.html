@@ -31,9 +31,10 @@
             <div class="jumbotron">
                 <h1 id="title">{{ col.collection.title }}</h1>
             </div>
-            <div v-for="item in items">
-                <div class="card">
-                        {{ col.collection.items.data}}
+            <div class="card-group">
+                <div class="card" v-for="item in col.collection.items">
+                    
+                    <a v-bind:href="item.href" class="btn btn-primary">Ver</a>
                 </div> 
             </div>
         </div>    
