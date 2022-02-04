@@ -33,7 +33,16 @@
             </div>
             <div class="card-group">
                 <div class="card" v-for="item in col.collection.items">
-                    
+                    <div class="card-body" v-for="movie in item.data">
+                        <dl>
+                            <dt class="card-title">
+                                {{ movie.prompt }}
+                            </dt>
+                            <dd>
+                                {{movie.value}}
+                            </dd>
+                        </dl>
+                    </div>
                     <a v-bind:href="item.href" class="btn btn-primary">Ver</a>
                 </div> 
             </div>
